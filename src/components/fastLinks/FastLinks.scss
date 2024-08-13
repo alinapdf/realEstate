@@ -1,0 +1,58 @@
+.fast-links {
+  border-top: 1px solid #262626;
+  border-bottom: 1px solid #262626;
+  margin-bottom: 110px;
+  &-container {
+    width: 1920px;
+    margin: 0 auto;
+    .fast-links-list {
+      margin: 20px;
+      display: flex;
+
+      &-item {
+        border-radius: 12px;
+        background-color: #1a1a1a;
+        border: 1px solid #262626;
+        width: 455px;
+        height: 212px;
+        margin-right: 20px;
+        transition: all 0.5s ease;
+        &:last-child {
+          margin-right: 0;
+        }
+        &-link {
+          padding: 40px 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          position: relative;
+          &-img {
+            margin-bottom: 30px;
+          }
+          &-text {
+            max-width: 415px;
+          }
+          &::after {
+            content: "";
+            width: 34px;
+            height: 34px;
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            background-image: url("./../../img/fast-links/fl-arrow.svg");
+            background-repeat: no-repeat;
+            transition: all 0.5s ease;
+          }
+          &:hover::after {
+            transform: translate(5px, -5px);
+          }
+        }
+        &:hover {
+          background-color: #292929;
+        }
+      }
+    }
+  }
+}

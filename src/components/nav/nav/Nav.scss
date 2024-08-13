@@ -1,0 +1,44 @@
+.nav {
+  padding: 22px 0;
+  background-color: #1a1a1a;
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-list {
+      display: flex;
+      &-item {
+        margin-right: 5px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+        &-link {
+          padding: 14px 24px;
+          border-radius: 10px;
+          transition: all 0.5s ease;
+          border: 1px solid transparent;
+
+          &.active {
+            background-color: #141414;
+            border: 1px solid #262626;
+          }
+          &:hover {
+            background-color: #141414;
+            border: 1px solid #262626;
+          }
+        }
+      }
+    }
+    &-contact-us {
+      padding: 16px 24px;
+      border-radius: 10px;
+      background-color: #141414;
+      border: 1px solid #262626;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: #0e0d0d;
+      }
+    }
+  }
+}

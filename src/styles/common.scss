@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Urbanist-Regular";
+  src: url("./../fonts/Urbanist-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Urbanist-Medium";
+  src: url("./../fonts/Urbanist-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Urbanist-Bold";
+  src: url("./../fonts/Urbanist-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Urbanist-SemiBold";
+  src: url("./../fonts/Urbanist-SemiBold.ttf") format("truetype");
+}
+
+body {
+  background-color: #141414;
+  color: #fff;
+  font-family: "Urbanist-Medium", sans-serif;
+}
+
+.container {
+  max-width: 1596px;
+  margin: 0 auto;
+}

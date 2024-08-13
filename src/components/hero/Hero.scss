@@ -1,0 +1,114 @@
+.hero {
+  position: relative;
+  margin-bottom: 173px;
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-info {
+      margin-top: 114px;
+      width: 758px;
+      &-header {
+        font-family: "Urbanist-SemiBold", sans-serif;
+        font-size: 60px;
+        line-height: 120%;
+        margin-bottom: 24px;
+      }
+      &-text {
+        font-size: 18px;
+        line-height: 150%;
+        color: #999999;
+        margin-bottom: 60px;
+      }
+      &-btns {
+        display: flex;
+        color: #fff;
+        align-items: center;
+        margin-bottom: 60px;
+        & button {
+          color: white;
+          font-size: 18px;
+        }
+        &-learn-more {
+          padding: 18px 24px;
+          border-radius: 10px;
+          border: 1px solid #262626;
+          margin-right: 20px;
+        }
+        &-browse-properties {
+          padding: 18px 24px;
+          border-radius: 10px;
+          background-color: #703bf7;
+        }
+      }
+      &-counts {
+        display: flex;
+        align-items: center;
+        &-item {
+          border-radius: 12px;
+          background-color: #1a1a1a;
+          padding: 16px 24px;
+          border: 1px solid #262626;
+          margin-right: 20px;
+          &:last-child {
+            margin-right: 0;
+          }
+          &-number {
+            font-family: "Urbanist-Bold", sans-serif;
+            font-size: 40px;
+            margin-bottom: 2px;
+          }
+          &-text {
+            font-size: 18px;
+            color: #999;
+          }
+        }
+      }
+    }
+    &-img {
+      background-color: red;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50%;
+      height: 814px;
+      background-size: 100% 100%;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &-round-promo {
+    position: absolute;
+    top: 144px;
+    right: 50%;
+    transform: translateX(50%);
+    &-link {
+      padding: 71px;
+      //   background-color: red;
+      position: relative;
+      &::after {
+        content: "";
+        width: 175px;
+        height: 175px;
+        position: absolute;
+        transform: translate(-60%, -40%);
+        background-image: url("./../../img/hero/discover-your-dream-property-circle-promo.png");
+        background-repeat: no-repeat;
+        z-index: -1;
+        animation: rotate 20s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-60%, -40%) rotate(0deg);
+  }
+  to {
+    transform: translate(-60%, -40%) rotate(360deg);
+  }
+}

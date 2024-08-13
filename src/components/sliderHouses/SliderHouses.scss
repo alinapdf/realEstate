@@ -1,0 +1,121 @@
+.swiper-houses {
+  margin-bottom: 110px;
+  &-header {
+    font-family: "Urbanist-SemiBold", sans-serif;
+    font-size: 48px;
+    padding-top: 60px;
+    margin-bottom: 14px;
+    background-image: url("./../../img/common-imgs/shine-icon.svg");
+    background-repeat: no-repeat;
+    background-position: left 0 top 0;
+  }
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    align-items: center;
+    &-text {
+      max-width: 1200px;
+      font-size: 18px;
+      color: #999;
+    }
+    &-link {
+      padding: 18px 24px;
+      border-radius: 10px;
+      background-color: #1a1a1a;
+      border: 1px solid #262626;
+    }
+  }
+}
+
+.swiper-house-list-item {
+  padding: 40px;
+  &-img {
+    margin-bottom: 30px;
+    & img {
+      border-radius: 12px;
+    }
+  }
+  &-name {
+    font-family: "Urbanist-SemiBold", sans-serif;
+    font-size: 24px;
+    max-width: 432px;
+    margin-bottom: 6px;
+  }
+  &-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 3em;
+    line-height: 150%;
+    color: #999;
+  }
+  &-properties {
+    display: flex;
+    margin-bottom: 30px;
+    &-item {
+      font-size: 18px;
+      padding: 8px 14px 8px 42px;
+      background-color: #1a1a1a;
+      border: 1px solid #262626;
+      border-radius: 28px;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.bedroom {
+        background-image: url("./../../img/slider-houses/bedroom-icon.svg");
+        background-repeat: no-repeat;
+        background-position: top 7px left 11px;
+      }
+      &.bathroom {
+        background-image: url("./../../img/slider-houses/bathroom-icon.svg");
+        background-repeat: no-repeat;
+        background-position: top 6px left 11px;
+      }
+      &.type {
+        background-image: url("./../../img/slider-houses/villa-icon.svg");
+        background-repeat: no-repeat;
+        background-position: top 7px left 9px;
+      }
+    }
+  }
+  &-bottom-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-price {
+      &-text {
+        color: #999;
+        margin-bottom: 2px;
+      }
+      &-quantity {
+        font-family: "Urbanist-SemiBold", sans-serif;
+        font-size: 24px;
+      }
+    }
+    &-link {
+      font-size: 18px;
+      padding: 18px 54.5px;
+      background-color: #703bf7;
+      border-radius: 10px;
+    }
+  }
+}
+
+.text-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.swiper-house-list-item-text-read-more {
+  text-decoration: underline;
+  cursor: pointer;
+  position: absolute;
+  z-index: 999;
+  background-color: #141414;
+  right: 0;
+  bottom: 0;
+  font-size: 18px;
+}

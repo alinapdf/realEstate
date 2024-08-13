@@ -1,0 +1,35 @@
+.promo-top {
+  background-image: url("./../../../img/nav/promo-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: #191919;
+  &-wrapper-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 0;
+    font-size: 18px;
+    &-text {
+      margin-right: 10px;
+    }
+    &-link {
+      text-decoration: underline;
+      transition: all 0.5s ease;
+    }
+  }
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
+.promo-top-close-btn {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+}
