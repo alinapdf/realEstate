@@ -4,12 +4,13 @@ import dom3 from "./../../img/slider-houses/dom3.jpg";
 import dom4 from "./../../img/slider-houses/dom1.jpg";
 import dom5 from "./../../img/slider-houses/dom2.jpg";
 import dom6 from "./../../img/slider-houses/dom3.jpg";
+
 const housesAray = [
   {
     id: 0,
     name: "Seaside Serenity Villa",
     description:
-      "Discover your own piece of paradise with the Seaside Serenity Villa. T With an open floor plan, breathtaking ocean views from every room, and direct access to a pristine sandy beach, this property is the epitome of coastal living.",
+      "Discover your own piece of paradise with the Seaside Serenity Villa. With an open floor plan, breathtaking ocean views from every room, and direct access to a pristine sandy beach, this property is the epitome of coastal living.",
     location: "Malibu, California",
     price: "$1,250,000",
     mainImg: dom1,
@@ -49,6 +50,7 @@ const housesAray = [
       mortgagePayment: "Varies",
       propertyInsurance: 100,
     },
+    buildYear: 2020, // Добавленный ключ
   },
   {
     id: 1,
@@ -94,6 +96,7 @@ const housesAray = [
       mortgagePayment: "Varies",
       propertyInsurance: 150,
     },
+    buildYear: 2018, // Добавленный ключ
   },
   {
     id: 2,
@@ -139,6 +142,7 @@ const housesAray = [
       mortgagePayment: "Varies",
       propertyInsurance: 185,
     },
+    buildYear: 2021, // Добавленный ключ
   },
   {
     id: 3,
@@ -184,6 +188,7 @@ const housesAray = [
       mortgagePayment: "Varies",
       propertyInsurance: 133,
     },
+    buildYear: 2015, // Добавленный ключ
   },
   {
     id: 4,
@@ -229,6 +234,7 @@ const housesAray = [
       mortgagePayment: "Varies",
       propertyInsurance: 167,
     },
+    buildYear: 2019, // Добавленный ключ
   },
   {
     id: 5,
@@ -274,6 +280,7 @@ const housesAray = [
       mortgagePayment: "Varies",
       propertyInsurance: 200,
     },
+    buildYear: 2022, // Добавленный ключ
   },
 ];
 

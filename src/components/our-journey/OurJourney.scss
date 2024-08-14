@@ -1,0 +1,31 @@
+.our-journey {
+  margin-top: 100px;
+  margin-bottom: 150px;
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-info {
+      max-width: 755px;
+      &-header {
+        padding-top: 55px;
+        margin-bottom: 14px;
+        font-family: "Urbanist-SemiBold", sans-serif;
+        font-size: 48px;
+        background-image: url("./../../img/common-imgs/shine-icon.svg");
+        background-repeat: no-repeat;
+      }
+      &-text {
+        font-size: 18px;
+        line-height: 150%;
+        color: #999;
+        margin-bottom: 80px;
+      }
+    }
+    &-img {
+      & img {
+        border-radius: 17px;
+      }
+    }
+  }
+}

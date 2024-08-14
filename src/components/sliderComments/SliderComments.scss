@@ -1,0 +1,71 @@
+.swiper-comments {
+  margin-bottom: 110px;
+  &-header {
+    font-family: "Urbanist-SemiBold", sans-serif;
+    font-size: 48px;
+    padding-top: 60px;
+    margin-bottom: 14px;
+    background-image: url("./../../img/common-imgs/shine-icon.svg");
+    background-repeat: no-repeat;
+    background-position: left 0 top 0;
+  }
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    align-items: center;
+    &-text {
+      max-width: 1200px;
+      font-size: 18px;
+      color: #999;
+    }
+    &-link {
+      padding: 18px 24px;
+      border-radius: 10px;
+      background-color: #1a1a1a;
+      border: 1px solid #262626;
+    }
+  }
+}
+
+.slider-comment-item {
+  padding: 50px;
+  &-stars {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    &-item {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &-main-comment {
+    font-family: "Urbanist-Semibold", sans-serif;
+    font-size: 24px;
+    max-width: 412px;
+    margin-bottom: 14px;
+  }
+  &-text {
+    line-height: 150%;
+    max-width: 412px;
+    margin-bottom: 40px;
+  }
+  &-commentator {
+    display: flex;
+    align-items: center;
+    &-avatar {
+      margin-right: 12px;
+    }
+    &-info {
+      width: 340px;
+      &-name {
+        font-size: 20px;
+      }
+      &-location {
+        color: #999;
+      }
+    }
+  }
+}

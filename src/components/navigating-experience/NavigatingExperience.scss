@@ -1,0 +1,62 @@
+.navigating-experience {
+  margin-bottom: 110px;
+  &-header {
+    padding-top: 55px;
+    margin-bottom: 14px;
+    font-family: "Urbanist-SemiBold", sans-serif;
+    font-size: 48px;
+    background-image: url("./../../img/common-imgs/shine-icon.svg");
+    background-repeat: no-repeat;
+  }
+  &-text {
+    font-size: 18px;
+    line-height: 150%;
+    color: #999;
+    margin-bottom: 80px;
+  }
+  &-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    &-item {
+      max-width: 512px;
+      margin-right: 30px;
+      margin-bottom: 50px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &-step {
+        font-size: 20px;
+        padding: 16px 0 16px 20px;
+        border-left: 1px solid #703bf7;
+      }
+      &-wrapper {
+        padding: 50px;
+        background: rgb(112, 59, 247);
+        background: linear-gradient(
+          135deg,
+          rgba(112, 59, 247, 1) 0%,
+          rgba(112, 59, 247, 0.0985644257703081) 23%,
+          rgba(0, 212, 255, 0) 50%
+        );
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border: 0.5px solid #703bf7;
+        &-header {
+          max-width: 412px;
+          font-family: "Urbanist-SemiBold", sans-serif;
+          font-size: 26px;
+          margin-bottom: 20px;
+        }
+        &-text {
+          max-width: 412px;
+          min-height: 108px;
+          font-size: 18px;
+          line-height: 150%;
+          color: #999;
+        }
+      }
+    }
+  }
+}

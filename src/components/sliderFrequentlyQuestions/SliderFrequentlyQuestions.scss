@@ -1,0 +1,45 @@
+.swiper-faq {
+  margin-bottom: 96px;
+  &-header {
+    font-family: "Urbanist-SemiBold", sans-serif;
+    font-size: 48px;
+    padding-top: 60px;
+    margin-bottom: 14px;
+    background-image: url("./../../img/common-imgs/shine-icon.svg");
+    background-repeat: no-repeat;
+    background-position: left 0 top 0;
+  }
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    align-items: center;
+    &-text {
+      max-width: 1200px;
+      font-size: 18px;
+      color: #999;
+    }
+    &-link {
+      padding: 18px 24px;
+      border-radius: 10px;
+      background-color: #1a1a1a;
+      border: 1px solid #262626;
+    }
+  }
+}
+
+.faq-item {
+  padding: 50px;
+  &-question {
+    font-family: "Urbanist-SemiBold", sans-serif;
+    font-size: 24px;
+    line-height: 150%;
+    max-width: 412px;
+    margin-bottom: 30px;
+  }
+  &-answer {
+    max-width: 412px;
+    line-height: 150%;
+    color: #999;
+  }
+}

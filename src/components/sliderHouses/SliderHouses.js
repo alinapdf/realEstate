@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
 import "./SliderHouses.scss";
-import "./SliderHouses.modul.scss";
+import styles from "./SliderHouses.module.scss";
 
 import { housesAray } from "./housesArray";
 import HouseItem from "./HouseItem";
@@ -36,22 +36,26 @@ const SliderHouses = () => {
               spaceBetween={30}
               pagination={{
                 type: "fraction",
+                el: `.${styles.customPaginationFraction}`,
                 renderFraction: function (currentClass, totalClass) {
                   return `
-                  <span class="${currentClass}"></span> of 
-                  <span class="${totalClass}"></span>
-                `;
+                    <span class="${currentClass} ${styles.customPaginationCurrent}"> </span> of 
+                    <span class="${totalClass} ${styles.customPaginationTotal}"></span>
+                  `;
                 },
               }}
-              navigation={true}
+              navigation={{
+                prevEl: `.${styles.customPrevButton}`,
+                nextEl: `.${styles.customNextButton}`,
+              }}
               mousewheel={true}
               keyboard={true}
               modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-              className="mySwiper"
+              className={styles.mySwiper}
             >
               {housesAray.map((house) => {
                 return (
-                  <SwiperSlide key={house.id}>
+                  <SwiperSlide key={house.id} className={styles.swiperSlide}>
                     <HouseItem
                       mainImg={house.mainImg}
                       alt={house.name}
@@ -65,6 +69,9 @@ const SliderHouses = () => {
                   </SwiperSlide>
                 );
               })}
+              <div className={styles.customPrevButton}></div>
+              <div className={styles.customNextButton}></div>
+              <div className={styles.customPaginationFraction}></div>
             </Swiper>
           </div>
         </div>

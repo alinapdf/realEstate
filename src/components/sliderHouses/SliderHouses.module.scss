@@ -1,0 +1,55 @@
+.swiperSlide {
+  background-color: #141414;
+  border-radius: 12px;
+  max-width: 512px;
+  border: 1px solid #262626;
+}
+
+.customPaginationFraction {
+  width: unset;
+  position: unset;
+  text-align: left;
+  font-size: 20px;
+  color: #999;
+  padding-top: 20px;
+  border-top: 1px solid #262626;
+  height: 80px;
+  margin-top: 50px;
+}
+
+.customPaginationCurrent {
+  color: #fff;
+}
+
+.customPaginationTotal {
+  color: #999;
+}
+
+.swiper-wrapper {
+  margin-bottom: 50px;
+}
+
+.customPrevButton,
+.customNextButton {
+  position: absolute;
+  top: unset;
+  margin-top: unset;
+  width: 58px;
+  height: 58px;
+  margin-top: 70px;
+  z-index: 10;
+  color: transparent;
+}
+
+.customPrevButton {
+  right: 68px;
+  left: unset;
+  background-image: url("./../../img/common-imgs/prev-active.svg");
+  background-repeat: no-repeat;
+}
+
+.customNextButton {
+  background-image: url("./../../img/common-imgs/next-active.svg");
+  background-repeat: no-repeat;
+  right: 0;
+}

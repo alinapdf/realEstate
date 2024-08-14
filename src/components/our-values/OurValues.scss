@@ -1,0 +1,72 @@
+.our-values {
+  margin-bottom: 140px;
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-info {
+      max-width: 517px;
+      &-header {
+        padding-top: 55px;
+        margin-bottom: 14px;
+        font-family: "Urbanist-SemiBold", sans-serif;
+        font-size: 48px;
+        background-image: url("./../../img/common-imgs/shine-icon.svg");
+        background-repeat: no-repeat;
+      }
+      &-text {
+        font-size: 18px;
+        line-height: 150%;
+        color: #999;
+      }
+    }
+    &-list {
+      max-width: 999px;
+      border: 2px solid #262626;
+      padding: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 12px;
+      &-item {
+        padding: 30px;
+        max-width: 460px;
+        &-header {
+          padding: 25px 0px 25px 88px;
+          font-family: "Urbanis-SemiBold", sans-serif;
+          font-size: 24px;
+          margin-bottom: 20px;
+          &.trust {
+            background-image: url("./../../img/our-values/trust-icon.svg");
+            background-repeat: no-repeat;
+          }
+          &.excellence {
+            background-image: url("./../../img/our-values/excellence-icon.svg");
+            background-repeat: no-repeat;
+          }
+          &.client-centric {
+            background-image: url("./../../img/our-values/client-centric-icon.svg");
+            background-repeat: no-repeat;
+          }
+          &.commitment {
+            background-image: url("./../../img/our-values/commitment-icon.svg");
+            background-repeat: no-repeat;
+          }
+        }
+        &-text {
+          font-size: 18px;
+          line-height: 150%;
+          color: #999;
+        }
+        &:nth-child(1),
+        &:nth-child(3) {
+          border-right: 1px solid #262626;
+        }
+
+        &:nth-child(4),
+        &:nth-child(3) {
+          border-top: 1px solid #262626;
+        }
+      }
+    }
+  }
+}

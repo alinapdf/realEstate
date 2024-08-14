@@ -1,0 +1,81 @@
+.team {
+  margin-bottom: 110px;
+  &-header {
+    padding-top: 55px;
+    margin-bottom: 14px;
+    font-family: "Urbanist-SemiBold", sans-serif;
+    font-size: 48px;
+    background-image: url("./../../img/common-imgs/shine-icon.svg");
+    background-repeat: no-repeat;
+  }
+  &-text {
+    font-size: 18px;
+    line-height: 150%;
+    color: #999;
+    margin-bottom: 80px;
+  }
+  &-list {
+    display: flex;
+    align-items: center;
+    &-item {
+      margin-right: 30px;
+      padding: 30px;
+      border: 1px solid #262626;
+      border-radius: 12px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &-top-wrapper {
+        position: relative;
+        margin-bottom: 50px;
+        &-img {
+          & img {
+            border-radius: 17px;
+          }
+        }
+        &-twitter {
+          padding: 14px 24px;
+          background-color: #703bf7;
+          border-radius: 43px;
+          position: absolute;
+          left: 50%;
+          bottom: -26px;
+          transform: translateX(-50%);
+        }
+      }
+      &-name {
+        font-family: "Urbanist-SemiBold", sans-serif;
+        font-size: 24px;
+        margin-bottom: 6px;
+        text-align: center;
+      }
+      &-position {
+        font-size: 18px;
+        color: #999;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+      &-form {
+        background-color: #1a1a1a;
+        max-width: 316px;
+        height: 72px;
+        border-radius: 100px;
+        border: 1px solid #262626;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-input {
+          background-color: transparent;
+          color: #fff;
+          margin-right: 6px;
+          padding-left: 24px;
+        }
+        &-send-message {
+          padding: 10px;
+          background-color: #703bf7;
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+}

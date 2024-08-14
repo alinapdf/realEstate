@@ -1,17 +1,17 @@
 import "./styles/reset.css";
 import "./styles/common.scss";
 import NavCommon from "./components/nav/navCommon/NavCommon";
-import Hero from "./components/hero/Hero";
-import FastLinks from "./components/fastLinks/FastLinks";
-import SliderHouses from "./components/sliderHouses/SliderHouses";
+import Footer from "./components/footer/Footer.js";
+import Home from "./pages/Home.js";
+import AboutUs from "./pages/AboutUs.js";
 
 const App = () => {
   return (
     <>
       <NavCommon />
-      <Hero />
-      <FastLinks />
-      <SliderHouses />
+      {/* <Home /> */}
+      <AboutUs />
+      <Footer />
     </>
   );
 };

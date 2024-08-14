@@ -1,0 +1,30 @@
+.cta {
+  padding: 100px 0;
+  border-top: 1px solid #262626;
+  border-bottom: 1px solid #262626;
+  background-image: url("./../../img/cta/cta-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &-header {
+    font-family: "Urbanist-SemiBold", sans-serif;
+    font-size: 48px;
+    max-width: 1154px;
+    margin-bottom: 14px;
+  }
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &-text {
+      width: 1154px;
+      line-height: 150%;
+      color: #999;
+    }
+    &-link {
+      padding: 18px 24px;
+      font-size: 18px;
+      background-color: #703bf7;
+      border-radius: 10px;
+    }
+  }
+}
