@@ -1,0 +1,89 @@
+.unlock-property-value {
+  margin-bottom: 80px;
+  &-header {
+    padding-top: 55px;
+    margin-bottom: 14px;
+    font-family: "Urbanist-SemiBold", sans-serif;
+    font-size: 48px;
+    background-image: url("./../../img/common-imgs/shine-icon.svg");
+    background-repeat: no-repeat;
+  }
+  &-text {
+    font-size: 18px;
+    line-height: 150%;
+    color: #999;
+    margin-bottom: 80px;
+  }
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  &-item {
+    max-width: 510px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #262626;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    padding: 50px;
+    &-title {
+      max-width: 310px;
+      padding: 23px 0 23px 100px;
+      font-family: "Urbanist-SemiBold", sans-serif;
+      margin-bottom: 30px;
+    }
+    &-text {
+      line-height: 150%;
+      font-size: 18px;
+      color: #999;
+    }
+    &-top-part {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      &-header {
+        font-family: "Urbanist-SemiBold", sans-serif;
+        font-size: 30px;
+        margin-bottom: 39px;
+      }
+      &-link {
+        font-size: 18px;
+        padding: 18px 24px;
+        background-color: #1a1a1a;
+        border: 1px solid #262626;
+      }
+    }
+    &.link {
+      margin-right: 0;
+      max-width: 1052px;
+      background-image: url("./../../img/services-page/card-1-bg.png");
+      background-repeat: no-repeat;
+      background-color: #191919;
+    }
+  }
+}
+
+.valation-mastery {
+  background-image: url("./../../img/services-page/valuation-mastery-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.strategic-marketing {
+  background-image: url("./../../img/services-page/strategic-marketing-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.negotiation-wizardy {
+  background-image: url("./../../img/services-page/negotiation-wizardy-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.closing-success {
+  background-image: url("./../../img/services-page/closing-success-icon.svg");
+  background-repeat: no-repeat;
+}

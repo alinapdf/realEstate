@@ -1,0 +1,20 @@
+.service-hero {
+  padding: 150px 0 100px;
+  background: rgb(38, 38, 38);
+  background: linear-gradient(
+    156deg,
+    rgba(38, 38, 38, 0.5) 14%,
+    rgba(20, 20, 20, 1) 68%
+  );
+  &-header {
+    font-family: "Urbanist-SemiBold", sans-serif;
+    font-size: 48px;
+    margin-bottom: 14px;
+  }
+  &-text {
+    font-size: 18px;
+    color: #999;
+    line-height: 150%;
+    max-width: 1358px;
+  }
+}

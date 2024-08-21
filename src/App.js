@@ -6,6 +6,7 @@ import Home from "./pages/Home.js";
 import AboutUs from "./pages/AboutUs.js";
 import Properties from "./pages/Properties.js";
 import PropertyDetails from "./pages/PropertyDetails.js";
+import Service from "./pages/Service.js";
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
       {/* <Home /> */}
       {/* <AboutUs /> */}
       {/* <Properties /> */}
-      <PropertyDetails />
+      {/* <PropertyDetails /> */}
+      <Service />
       <Footer />
     </>
   );
