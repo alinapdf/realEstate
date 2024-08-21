@@ -1,0 +1,67 @@
+.swiper-houses {
+  &-header {
+    padding-top: 55px;
+    margin-bottom: 14px;
+    font-family: "Urbanist-SemiBold", sans-serif;
+    font-size: 48px;
+    background-image: url("./../../img/common-imgs/shine-icon.svg");
+    background-repeat: no-repeat;
+  }
+  &-text {
+    font-size: 18px;
+    line-height: 150%;
+    color: #999;
+    margin-bottom: 80px;
+  }
+}
+
+.house-list-item {
+  background-color: #141414;
+  border-radius: 12px;
+  max-width: 512px;
+  border: 1px solid #262626;
+}
+
+li {
+  list-style: none;
+}
+
+.house-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.house-pagination {
+  color: #999;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.house-pagination-prev {
+  color: #999;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.house-pagination-number {
+  color: #999;
+  font-size: 18px;
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #262626;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.house-pagination-next {
+  color: #999;
+  font-size: 18px;
+}

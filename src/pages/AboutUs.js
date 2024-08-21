@@ -1,3 +1,4 @@
+import Cta from "../components/cta/Cta";
 import NavigatingExperience from "../components/navigating-experience/NavigatingExperience";
 import OurAchievements from "../components/our-achievements/OurAchievements";
 import OurJourney from "../components/our-journey/OurJourney";
@@ -14,6 +15,7 @@ const AboutUs = () => {
       <NavigatingExperience />
       <Team />
       <ValuedClients />
+      <Cta />
     </>
   );
 };

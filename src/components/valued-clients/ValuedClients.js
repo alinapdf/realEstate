@@ -8,9 +8,11 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
 import "./ValuedClients.scss";
-// import styles from "./ValuedClients.module.scss";
+import styles from "./ValuedClients.module.scss";
 
 import { valuedClients } from "./valuedClientsList";
+
+import ValuedClientItem from "./ValuedClientItem";
 
 const ValuedClients = () => {
   return (
@@ -25,29 +27,46 @@ const ValuedClients = () => {
           </p>
           <div className="valued-clients-swiper">
             <Swiper
-              slidesPerView={3}
+              slidesPerView={2}
               spaceBetween={30}
               pagination={{
                 type: "fraction",
-                // el: `.${styles.customPaginationFraction}`,
                 renderFraction: function (currentClass, totalClass) {
                   return `
-                    <span class="${currentClass} "> </span> of 
-                    <span class="${totalClass} "></span>
-                  `;
+                  
+                    <span class="${currentClass} ${styles.customPaginationCurrent}"></span> <span  class="${styles.paginationOf}">of</span/> 
+                    <span class="${totalClass} ${styles.customPaginationTotal}"></span>
+                  
+                `;
                 },
+                element: `${styles.paginationStyles}`,
               }}
-              navigation={true}
+              navigation={{
+                prevEl: `.${styles.customPrevButton}`,
+                nextEl: `.${styles.customNextButton}`,
+              }}
               mousewheel={true}
               keyboard={true}
               modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-              className="mySwiper"
+              className={styles.mySwiper}
             >
-              <SwiperSlide>323</SwiperSlide>
-              <SwiperSlide>323</SwiperSlide>
-              <SwiperSlide>323</SwiperSlide>
-              <SwiperSlide>323</SwiperSlide>
-              <SwiperSlide>323</SwiperSlide>
+              {valuedClients.map((client) => {
+                return (
+                  <SwiperSlide className={styles.swiperSlide} key={client.id}>
+                    <ValuedClientItem
+                      since={client.year}
+                      name={client.name}
+                      domain={client.domain}
+                      category={client.category}
+                      whatTheySaid={client.whatTheySaid}
+                    />
+                  </SwiperSlide>
+                );
+              })}
+
+              <div className={styles.customPrevButton}></div>
+              <div className={styles.customNextButton}></div>
+              <div className={styles.paginationStyles}></div>
             </Swiper>
           </div>
         </div>

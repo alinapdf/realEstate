@@ -1,0 +1,133 @@
+.property-details-form {
+  margin-bottom: 110px;
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &-right-part {
+      max-width: 519px;
+      width: 100%;
+      &-header {
+        font-family: "Urbanist-SemiBold", sans-serif;
+        font-size: 48px;
+        line-height: 150%;
+        padding-top: 40px;
+        background-image: url("./../../img/common-imgs/shine-icon.svg");
+        background-repeat: no-repeat;
+        margin-bottom: 14px;
+      }
+      &-text {
+        font-size: 18px;
+        color: #999;
+        line-height: 150%;
+      }
+    }
+  }
+  &-itself {
+    border: 1px solid #262626;
+    max-width: 984px;
+    border-radius: 12px;
+    padding: 50px;
+    width: 100%;
+    &-client-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      margin-bottom: 30px;
+      gap: 30px;
+      &-label {
+        font-family: "Urbanist-SemiBold", sans-serif;
+        font-size: 20px;
+      }
+      &-input {
+        display: block;
+        margin-top: 16px;
+        background-color: #1a1a1a;
+        border: 1px solid #262626;
+        border-radius: 8px;
+        max-width: 427px;
+        height: 68px;
+        padding-left: 20px;
+        color: #fff;
+        width: 100%;
+        font-size: 18px;
+      }
+    }
+    &-selected-property {
+      margin-bottom: 30px;
+      &-header {
+        font-family: "Urbanist-SemiBold", sans-serif;
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+      &-parametr {
+        max-width: 884px;
+        height: 72px;
+        background-color: #1a1a1a;
+        padding: 26px 20px;
+        font-size: 20px;
+        color: #e4e4e7;
+        background-image: url("./../../img/property-details/location-icon.svg");
+        background-repeat: no-repeat;
+        background-position: right 20px top 24px;
+      }
+    }
+    &-message {
+      font-family: "Urbanist-SemiBold", sans-serif;
+      font-size: 20px;
+      &-input {
+        background-color: #1a1a1a;
+        display: block;
+        width: 100%;
+        border: 1px solid #262626;
+        border-radius: 8px;
+        margin-top: 16px;
+        padding: 26px 20px;
+        color: #fff;
+      }
+    }
+    &-bottom-part {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-terms {
+        font-size: 18px;
+        color: #999;
+        &-input {
+          appearance: none;
+          width: 18px;
+          height: 18px;
+          border: 2px solid #262626;
+          border-radius: 4px;
+          margin-right: 10px;
+          position: relative;
+          cursor: pointer;
+          background-color: #1a1a1a;
+          margin-right: 10px;
+          &:checked {
+            background-color: blue;
+          }
+
+          &:checked::before {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 2px;
+          }
+        }
+      }
+      &-btn {
+        font-size: 18px;
+        color: #fff;
+        border-radius: 8px;
+        background-color: #703bf7;
+        padding: 18px 46px;
+      }
+    }
+  }
+}

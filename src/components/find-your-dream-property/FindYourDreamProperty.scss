@@ -1,0 +1,176 @@
+.find-your-drean-property {
+  position: relative;
+  margin-bottom: 250px;
+  .info-text {
+    background: rgb(38, 38, 38);
+    background: linear-gradient(
+      156deg,
+      rgba(38, 38, 38, 0.5) 14%,
+      rgba(20, 20, 20, 1) 68%
+    );
+    padding: 150px 0;
+    .find-your-drean-property-header {
+      font-family: "Urbanist-SemiBold", sans-serif;
+      font-size: 48px;
+      max-width: 1358px;
+      margin-bottom: 14px;
+    }
+    .find-your-drean-property-text {
+      max-width: 1358px;
+      font-size: 18px;
+      color: #999;
+    }
+  }
+}
+
+.find-your-drean-property-filter {
+  position: absolute;
+  width: 100%;
+
+  bottom: -143px;
+  &-search {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 103px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border: 10px solid #262626;
+    background-color: #141414;
+    &-input {
+      margin-left: 24px;
+      max-width: 1021px;
+      width: 100%;
+      background-color: transparent;
+      font-family: "Urbanist-Medium", sans-serif;
+      font-size: 24px;
+      &:focus {
+        outline: none;
+      }
+      color: #fff;
+    }
+    &-btn {
+      color: #fff;
+      font-size: 18px;
+      padding: 18px 24px 18px 56px;
+      background-color: #703bf7;
+      border-radius: 10px;
+      margin-right: 20px;
+      background-image: url("./../../img/fing-dream-property/search-icon.svg");
+      background-repeat: no-repeat;
+      background-position: top 15px left 24px;
+    }
+  }
+  &-list {
+    background-color: #262626;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      max-width: 300px;
+      width: 100%;
+      &-current {
+        height: 72px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        font-size: 18px;
+        color: #999;
+        border-radius: 12px;
+        border: 1px solid #262626;
+        background-color: #141414;
+        padding-left: 54px;
+        &::before {
+          content: "";
+          width: 1px;
+          height: 27px;
+          background-color: #262626;
+          margin-right: 10px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          width: 32px;
+          height: 32px;
+          background-image: url("./../../img/fing-dream-property/arrow-down-icon.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          transform-origin: center;
+          transition: transform 0.5s ease;
+          z-index: 9;
+        }
+        &.location {
+          background-image: url("./../../img/fing-dream-property/location-icon.svg");
+          background-repeat: no-repeat;
+          background-position: top 20px left 20px;
+        }
+        &.property-type {
+          background-image: url("./../../img/fing-dream-property/property-type-icon.svg");
+          background-repeat: no-repeat;
+          background-position: top 20px left 20px;
+        }
+        &.pricing {
+          background-image: url("./../../img/fing-dream-property/pricing-range-icon.svg");
+          background-repeat: no-repeat;
+          background-position: top 20px left 20px;
+        }
+        &.property-size {
+          background-image: url("./../../img/fing-dream-property/property-size-icon.svg");
+          background-repeat: no-repeat;
+          background-position: top 20px left 20px;
+        }
+        &.build-year {
+          background-image: url("./../../img/fing-dream-property/build-year-icon.svg");
+          background-repeat: no-repeat;
+          background-position: top 20px left 20px;
+        }
+      }
+      &-body {
+        color: #999;
+        position: absolute;
+        margin-top: 10px;
+        background-color: #141414;
+        max-width: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        display: none;
+        z-index: 99;
+        border: 1px solid #262626;
+        border-radius: 12px;
+        padding: 10px;
+        &-item {
+          height: 42px;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          margin-bottom: 10px;
+          border-radius: 10px;
+          padding-left: 10px;
+          transition: all 0.2s ease;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &:hover {
+            background-color: #262626;
+          }
+        }
+        &.is-active .find-your-drean-property-filter-list-item-body {
+          display: block;
+        }
+      }
+      &.is-active .find-your-drean-property-filter-list-item-body {
+        display: block;
+      }
+      &.is-active .find-your-drean-property-filter-list-item-current::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

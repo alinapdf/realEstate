@@ -1,0 +1,74 @@
+.mySwiper2 {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 0 20px 100px 20px;
+  background-color: #191919;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+:global {
+  .mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+    height: 144px;
+    border-radius: 8px;
+  }
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 8px;
+  }
+  .mySwiper {
+    padding: 20px;
+    background-color: #191919;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    .swiper-pagination-bullet {
+      background: #fff;
+    }
+  }
+}
+
+.swiperSlide {
+  height: 500px;
+}
+
+.customNextButton {
+  margin-top: 20px;
+  position: absolute;
+  right: 20px;
+}
+
+.customPrevButton {
+  margin-top: 20px;
+  position: absolute;
+  left: 20px;
+}
+
+.paginationCustom {
+  display: block;
+  //   background-color: red;
+  position: absolute;
+  left: 50% !important;
+  width: unset !important;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  border: 1px solid #262626;
+  padding: 18px 24px;
+  border-radius: 35px;
+}

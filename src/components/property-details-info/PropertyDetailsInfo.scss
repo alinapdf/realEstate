@@ -1,0 +1,110 @@
+.property-details-info2 {
+  margin-bottom: 110px;
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &-right-part {
+      max-width: 783px;
+      border-radius: 12px;
+      border: 1px solid #262626;
+      padding: 50px;
+      &-desc {
+        max-width: 683px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #262626;
+        &-header {
+          font-family: "Urbanist-SemiBold", sans-serif;
+          font-size: 24px;
+          margin-bottom: 14px;
+        }
+        &-text {
+          font-size: 18px;
+          color: #999;
+          line-height: 150%;
+        }
+      }
+      &-components {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        &-item {
+          padding-right: 30px;
+          border-right: 1px solid #262626;
+          max-width: 215px;
+          width: 100%;
+          &:last-child {
+            padding-right: 0;
+            border-right: none;
+          }
+          &-header {
+            font-size: 18px;
+            padding-left: 30px;
+            color: #999;
+            margin-bottom: 10px;
+            &.bedrooms {
+              background-image: url("./../../img/property-details/bedrooms-icon.svg");
+              background-repeat: no-repeat;
+            }
+            &.bathrooms {
+              background-image: url("./../../img/property-details/bathrooms-icon.svg");
+              background-repeat: no-repeat;
+            }
+            &.area {
+              background-image: url("./../../img/property-details/area-icon.svg");
+              background-repeat: no-repeat;
+            }
+          }
+          &-number {
+            font-family: "Urbanist-SemiBold", sans-serif;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+    &-left-part {
+      max-width: 783px;
+      border: 1px solid #262626;
+      border-radius: 12px;
+      padding: 50px;
+      width: 100%;
+      &-header {
+        font-family: "Urbanist-SemiBold", sans-serif;
+        font-size: 24px;
+        max-width: 683px;
+        margin-bottom: 50px;
+      }
+      &-features {
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+          background: rgb(26, 26, 26);
+          background: linear-gradient(
+            90deg,
+            rgba(26, 26, 26, 1) 0%,
+            rgba(26, 26, 26, 0) 100%
+          );
+          max-width: 683px;
+          padding: 18px 19px 18px 54px;
+          margin-bottom: 30px;
+          border-left: 1px solid #703bf7;
+          position: relative;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &::before {
+            content: "";
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 20px;
+            bottom: 18px;
+            background-image: url("./../../img/property-details/thunder-icon.svg");
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
