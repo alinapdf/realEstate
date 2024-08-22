@@ -1,39 +1,63 @@
 import logoDesctop from "./../../../img/nav/logo-descktop.svg";
 import "./Nav.scss";
+import { NavLink } from "react-router-dom";
+
 const Nav = () => {
+  const activeLink = "nav-wrapper-list-item-link active";
+  const normalLink = "nav-wrapper-list-item-link";
   return (
     <>
       <nav className="nav">
         <div className="container">
           <div className="nav-wrapper">
-            <a href="#" className="nav-wrapper-logo">
+            <NavLink to="/" className="nav-wrapper-logo">
               <img src={logoDesctop} alt="Estatein" />
-            </a>
+            </NavLink>
             <ul className="nav-wrapper-list">
               <li className="nav-wrapper-list-item">
-                <a href="#" className="nav-wrapper-list-item-link active">
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                >
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-wrapper-list-item">
-                <a href="#" className="nav-wrapper-list-item-link">
+                <NavLink
+                  to="/about-us"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                >
                   About Us
-                </a>
+                </NavLink>
               </li>
               <li className="nav-wrapper-list-item">
-                <a href="#" className="nav-wrapper-list-item-link">
+                <NavLink
+                  to="/properties"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                >
                   Properties
-                </a>
+                </NavLink>
               </li>
               <li className="nav-wrapper-list-item">
-                <a href="#" className="nav-wrapper-list-item-link">
+                <NavLink
+                  to="service/"
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                >
                   Services
-                </a>
+                </NavLink>
               </li>
             </ul>
-            <a href="#" className="nav-wrapper-contact-us">
+            <NavLink to="/contacts" className="nav-wrapper-contact-us">
               Contact Us
-            </a>
+            </NavLink>
           </div>
         </div>
       </nav>

@@ -1,8 +1,10 @@
 import "./EffortlessPropertyManagement.scss";
-const EffortlessPropertyManagement = () => {
+
+import React, { forwardRef } from "react";
+const EffortlessPropertyManagement = forwardRef((props, ref) => {
   return (
     <>
-      <section className="effortless-property-management">
+      <section className="effortless-property-management" ref={ref}>
         <div className="container">
           <h2 className="effortless-property-management-header">
             Effortless Property Management
@@ -70,6 +72,6 @@ const EffortlessPropertyManagement = () => {
       </section>
     </>
   );
-};
+});
 
 export default EffortlessPropertyManagement;

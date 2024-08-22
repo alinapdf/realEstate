@@ -1,8 +1,10 @@
 import "./SmartInvestment.scss";
-const SmartInvestment = () => {
+
+import React, { forwardRef } from "react";
+const SmartInvestment = forwardRef((props, ref) => {
   return (
     <>
-      <section className="smart-investment">
+      <section className="smart-investment" ref={ref}>
         <div className="container">
           <div className="smart-investment-wrapper">
             <div className="smart-investment-wrapper-right-part">
@@ -80,6 +82,6 @@ const SmartInvestment = () => {
       </section>
     </>
   );
-};
+});
 
 export default SmartInvestment;

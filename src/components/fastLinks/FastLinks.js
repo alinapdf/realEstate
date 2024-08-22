@@ -3,6 +3,8 @@ import flPropertyValue from "./../../img/fast-links/fl-unlock-property-value.svg
 import flPropertyManagement from "./../../img/fast-links/fl-property-management.svg";
 import flSmartInvestment from "./../../img/fast-links/fl-smart-investment.svg";
 import "./FastLinks.scss";
+import { NavLink } from "react-router-dom";
+
 const FastLinks = () => {
   return (
     <>
@@ -10,27 +12,34 @@ const FastLinks = () => {
         <div className="fast-links-container">
           <ul className="fast-links-list">
             <li className="fast-links-list-item">
-              <a href="#" className="fast-links-list-item-link">
+              <NavLink to="/properties" className="fast-links-list-item-link">
                 <div className="fast-links-list-item-link-img">
                   <img src={flDreamHome} alt="Dream Home" />
                 </div>
                 <p className="fast-links-list-item-link-text">
                   Find Your Dream Home
                 </p>
-              </a>
+              </NavLink>
             </li>
             <li className="fast-links-list-item">
-              <a href="#" className="fast-links-list-item-link">
+              <NavLink
+                to="/service#unlockPropertyValue"
+                className="fast-links-list-item-link"
+              >
                 <div className="fast-links-list-item-link-img">
                   <img src={flPropertyValue} alt="Unlock Property Value" />
                 </div>
                 <p className="fast-links-list-item-link-text">
                   Unlock Property Value
                 </p>
-              </a>
+              </NavLink>
             </li>
             <li className="fast-links-list-item">
-              <a href="#" className="fast-links-list-item-link">
+              <NavLink
+                to="/service#effortlessPropertyManagement"
+                href="#"
+                className="fast-links-list-item-link"
+              >
                 <div className="fast-links-list-item-link-img">
                   <img
                     src={flPropertyManagement}
@@ -40,10 +49,13 @@ const FastLinks = () => {
                 <p className="fast-links-list-item-link-text">
                   Effortless Property Management
                 </p>
-              </a>
+              </NavLink>
             </li>
             <li className="fast-links-list-item">
-              <a href="#" className="fast-links-list-item-link">
+              <NavLink
+                to="/service#smartInvestment"
+                className="fast-links-list-item-link"
+              >
                 <div className="fast-links-list-item-link-img">
                   <img
                     src={flSmartInvestment}
@@ -53,7 +65,7 @@ const FastLinks = () => {
                 <p className="fast-links-list-item-link-text">
                   Smart Investments, Informed Decisions
                 </p>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

@@ -13,6 +13,8 @@ import styles from "./SliderHouses.module.scss";
 import { housesAray } from "./housesArray";
 import HouseItem from "./HouseItem";
 
+import { NavLink } from "react-router-dom";
+
 const SliderHouses = () => {
   return (
     <>
@@ -26,9 +28,9 @@ const SliderHouses = () => {
               available through Estatein. Click "View Details" for more
               information.
             </p>
-            <a href="#" className="swiper-houses-info-link">
+            <NavLink to="/properties" className="swiper-houses-info-link">
               View All Properties
-            </a>
+            </NavLink>
           </div>
           <div className="swiper-houses-swiper">
             <Swiper

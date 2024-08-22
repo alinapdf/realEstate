@@ -1,9 +1,10 @@
+import { NavLink } from "react-router-dom";
 import dom1 from "./../../img/slider-houses/dom1.jpg";
 import "./SliderHouses.scss";
 const HouseItem = (props) => {
   return (
     <>
-      <li className="swiper-house-list-item">
+      <NavLink to="/property-details" className="swiper-house-list-item">
         <div className="swiper-house-list-item-img">
           <img src={props.mainImg} alt={props.name} />
         </div>
@@ -41,7 +42,7 @@ const HouseItem = (props) => {
             View Property Details
           </a>
         </div>
-      </li>
+      </NavLink>
     </>
   );
 };

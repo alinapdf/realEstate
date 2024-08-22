@@ -1,8 +1,11 @@
 import "./UnlockPropertyValue.scss";
-const UnlockPropertyValue = () => {
+
+import React, { forwardRef } from "react";
+
+const UnlockPropertyValue = forwardRef((props, ref) => {
   return (
     <>
-      <section className="unlock-property-value">
+      <section className="unlock-property-value" ref={ref}>
         <div className="container">
           <h2 className="unlock-property-value-header">
             Unlock Property Value
@@ -71,6 +74,6 @@ const UnlockPropertyValue = () => {
       </section>
     </>
   );
-};
+});
 
 export default UnlockPropertyValue;

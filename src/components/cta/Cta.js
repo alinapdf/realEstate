@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Cta.scss";
 const Cta = () => {
   return (
@@ -14,9 +15,9 @@ const Cta = () => {
               available properties or get in touch with our team for
               personalized assistance.
             </p>
-            <a href="#" className="cta-wrapper-link">
+            <NavLink to="/properties" className="cta-wrapper-link">
               Explore Properties
-            </a>
+            </NavLink>
           </div>
         </div>
       </section>

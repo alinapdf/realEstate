@@ -2,6 +2,8 @@ import "./Hero.scss";
 import mainImg from "./../../img/hero/hero-section-main-photo-1.jpg";
 import arrowPromo from "./../../img/hero/discover-your-dream-property-arrow.svg";
 import Counts from "../counts/Counts";
+
+import { NavLink } from "react-router-dom";
 const Hero = () => {
   return (
     <>
@@ -17,12 +19,18 @@ const Hero = () => {
                 Explore our listings to find the home that matches your dreams.
               </p>
               <div className="hero-wrapper-info-btns">
-                <button className="hero-wrapper-info-btns-learn-more">
+                <NavLink
+                  to="/contacts#form"
+                  className="hero-wrapper-info-btns-learn-more"
+                >
                   Learn More
-                </button>
-                <button className="hero-wrapper-info-btns-browse-properties">
+                </NavLink>
+                <NavLink
+                  to="/properties"
+                  className="hero-wrapper-info-btns-browse-properties"
+                >
                   Browse Properties
-                </button>
+                </NavLink>
               </div>
               <Counts />
             </div>
@@ -31,13 +39,13 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero-round-promo">
-            <a href="#" className="hero-round-promo-link">
+            <NavLink to="/properties" className="hero-round-promo-link">
               <img
                 src={arrowPromo}
                 alt="Discover your dream property"
                 className="hero-round-promo-link-img"
               />
-            </a>
+            </NavLink>
           </div>
         </div>
       </section>
