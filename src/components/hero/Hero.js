@@ -4,10 +4,12 @@ import arrowPromo from "./../../img/hero/discover-your-dream-property-arrow.svg"
 import Counts from "../counts/Counts";
 
 import { NavLink } from "react-router-dom";
-const Hero = () => {
+
+import React, { forwardRef } from "react";
+const Hero = forwardRef((props, ref) => {
   return (
     <>
-      <section className="hero">
+      <section className="hero" ref={ref}>
         <div className="container">
           <div className="hero-wrapper">
             <div className="hero-wrapper-info">
@@ -51,6 +53,6 @@ const Hero = () => {
       </section>
     </>
   );
-};
+});
 
 export default Hero;

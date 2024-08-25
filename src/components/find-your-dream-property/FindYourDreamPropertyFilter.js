@@ -7,7 +7,26 @@ import PricingBody from "./Pricing.body";
 import PropertySizeBody from "./PropertySizeBody";
 import BuildYearBody from "./BuildYearBody";
 
+import { useContext } from "react";
+
+import { FilterContext } from "../../utils/FilterContext";
+
 const FindYourDreamPropertyFilter = () => {
+  const { searchQuery, filters, updateFilters } = useContext(FilterContext);
+
+  // const [localSearchQuery, setLocalSearchQuery] = useState("");
+
+  // const handleSearchClick = () => {
+  //   updateSearchQuery(localSearchQuery);
+  // };
+
+  const [localSearchQuery, setLocalSearchQuery] = useState("");
+  const { updateSearchQuery } = useContext(FilterContext);
+
+  const handleSearchClick = () => {
+    updateSearchQuery(localSearchQuery);
+  };
+
   // Location
   const [isActiveLocation, setIsActiveLocation] = useState(false);
   const toggleParametrLocation = () => {
@@ -17,6 +36,7 @@ const FindYourDreamPropertyFilter = () => {
   const [currentLocation, setCurrenLocation] = useState("Location");
   const currentLocationParametr = (location) => {
     setCurrenLocation(location);
+    updateFilters({ location });
     setIsActiveLocation(false);
   };
 
@@ -46,6 +66,7 @@ const FindYourDreamPropertyFilter = () => {
     useState("Property Type");
   const currentPropertyTypeParametr = (propertyType) => {
     setCurrenPropertyType(propertyType);
+    updateFilters({ propertyType });
     setIsActivePropertyType(false);
   };
 
@@ -64,6 +85,7 @@ const FindYourDreamPropertyFilter = () => {
   const [currentPricing, setCurrenPricing] = useState("Pricing");
   const currentPricingParametr = (pricing) => {
     setCurrenPricing(pricing);
+    updateFilters({ pricing });
     setIsActivePricing(false);
   };
 
@@ -85,6 +107,7 @@ const FindYourDreamPropertyFilter = () => {
     useState("Property Size");
   const currentPropertySizeParametr = (propertySize) => {
     setCurrenPropertySize(propertySize);
+    updateFilters({ propertySize });
     setIsActivePropertySize(false);
   };
 
@@ -106,6 +129,7 @@ const FindYourDreamPropertyFilter = () => {
   const [currentBuildYear, setCurrenBuildYear] = useState("Build Year");
   const currentBuildYearParametr = (buildYear) => {
     setCurrenBuildYear(buildYear);
+    updateFilters({ buildYear });
     setIsActiveBuildYear(false);
   };
 
@@ -117,10 +141,15 @@ const FindYourDreamPropertyFilter = () => {
             type="text"
             className="find-your-drean-property-filter-search-input"
             placeholder="Search For A Property"
+            onChange={(e) => updateSearchQuery(e.target.value)}
+            value={searchQuery}
           />
-          <button className="find-your-drean-property-filter-search-btn">
+          {/* <button
+            className="find-your-drean-property-filter-search-btn"
+            onClick={handleSearchClick}
+          >
             Find Property
-          </button>
+          </button> */}
         </div>
         <ul className="find-your-drean-property-filter-list">
           <li

@@ -19,9 +19,9 @@ import btnPrev from "./../../img/common-imgs/prev-active.svg";
 
 import "swiper/css/pagination";
 
-const PropertyDetailsSwiper = () => {
+const PropertyDetailsSwiper = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
+  console.log(images);
   return (
     <>
       <Swiper
@@ -34,36 +34,13 @@ const PropertyDetailsSwiper = () => {
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
+        {images.map((image, index) => {
+          return (
+            <SwiperSlide>
+              <img src={image} alt={index} />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
       {/* //второй свайпер */}
       <Swiper
@@ -86,36 +63,13 @@ const PropertyDetailsSwiper = () => {
           el: `.${styles.paginationCustom}`,
         }}
       >
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
+        {images.map((image, index) => {
+          return (
+            <SwiperSlide>
+              <img src={image} alt={index} />
+            </SwiperSlide>
+          );
+        })}
         <div className={styles.customPrevButton}>
           <img src={btnPrev} alt="Previous" />
         </div>

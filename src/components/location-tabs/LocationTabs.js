@@ -1,7 +1,10 @@
 import { useState } from "react";
 import "./LocationTabs.scss";
 import { allOffices } from "./locationTabsLists";
-const LocationTabs = () => {
+
+import React, { forwardRef } from "react";
+
+const LocationTabs = forwardRef((props, ref) => {
   const regionalOffices = allOffices.filter((office) => office.isRegional);
   const internationalOffices = allOffices.filter(
     (office) => !office.isRegional
@@ -14,7 +17,7 @@ const LocationTabs = () => {
 
   return (
     <>
-      <section className="location-tabs">
+      <section className="location-tabs" ref={ref}>
         <div className="container">
           <h2 className="location-tabs-header">
             Discover Our Office Locations
@@ -179,6 +182,6 @@ const LocationTabs = () => {
       </section>
     </>
   );
-};
+});
 
 export default LocationTabs;

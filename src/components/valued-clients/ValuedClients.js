@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -14,10 +14,10 @@ import { valuedClients } from "./valuedClientsList";
 
 import ValuedClientItem from "./ValuedClientItem";
 
-const ValuedClients = () => {
+const ValuedClients = forwardRef((props, ref) => {
   return (
     <>
-      <section className="valued-clients">
+      <section className="valued-clients" ref={ref}>
         <div className="container">
           <h2 className="valued-clients-header">Our Valued Clients</h2>
           <p className="valued-clients-text">
@@ -73,6 +73,6 @@ const ValuedClients = () => {
       </section>
     </>
   );
-};
+});
 
 export default ValuedClients;

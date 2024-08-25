@@ -4,11 +4,11 @@ import twitter from "./../../img/team/twitter-icon.svg";
 import sendMessage from "./../../img/team/send-icon.svg";
 
 import { teamList } from "./teamList";
-
-const Team = () => {
+import React, { forwardRef } from "react";
+const Team = forwardRef((props, ref) => {
   return (
     <>
-      <section className="team">
+      <section className="team" ref={ref}>
         <div className="container">
           <h2 className="team-header">Meet the Estatein Team</h2>
           <p className="team-text">
@@ -48,6 +48,6 @@ const Team = () => {
       </section>
     </>
   );
-};
+});
 
 export default Team;

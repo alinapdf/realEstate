@@ -2,28 +2,44 @@
   background-image: url("./../../../img/nav/promo-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #191919;
+  z-index: 9999;
+  opacity: 0; /* Скрываем компонент по умолчанию */
+  visibility: hidden; /* Скрываем компонент по умолчанию */
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
   &-wrapper-main {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 18px 0;
     font-size: 18px;
+
     &-text {
       margin-right: 10px;
     }
+
     &-link {
       text-decoration: underline;
       transition: all 0.5s ease;
     }
   }
+
   &-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
     position: relative;
+  }
+
+  &.visible {
+    opacity: 1; /* Показываем компонент */
+    visibility: visible; /* Делаем компонент видимым */
   }
 }
 

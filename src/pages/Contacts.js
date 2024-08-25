@@ -18,12 +18,21 @@ const Contacts = () => {
     }
   }, [location]);
 
+  const officesRef = useRef(null);
+  const locationOffices = useLocation();
+
+  useEffect(() => {
+    if ((locationOffices.hash = "#offices")) {
+      officesRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [locationOffices]);
+
   return (
     <>
       <ContactsHero />
       <FastLinks />
       <FormCommon ref={formRef} />
-      <LocationTabs />
+      <LocationTabs ref={officesRef} />
       <ExploreWorld />
       <Cta />
     </>

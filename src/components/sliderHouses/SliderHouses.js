@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -12,13 +12,12 @@ import styles from "./SliderHouses.module.scss";
 
 import { housesAray } from "./housesArray";
 import HouseItem from "./HouseItem";
-
 import { NavLink } from "react-router-dom";
 
-const SliderHouses = () => {
+const SliderHouses = forwardRef((props, ref) => {
   return (
     <>
-      <section className="swiper-houses">
+      <section className="swiper-houses" ref={ref}>
         <div className="container">
           <h2 className="swiper-houses-header">Featured Properties</h2>
           <div className="swiper-houses-info">
@@ -67,6 +66,7 @@ const SliderHouses = () => {
                       bathroomsQuantity={house.bathroomsQuantity}
                       type={house.type}
                       totalPrice={house.price}
+                      id={house.id}
                     />
                   </SwiperSlide>
                 );
@@ -80,6 +80,6 @@ const SliderHouses = () => {
       </section>
     </>
   );
-};
+});
 
 export default SliderHouses;

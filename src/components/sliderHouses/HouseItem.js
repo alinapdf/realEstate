@@ -4,7 +4,10 @@ import "./SliderHouses.scss";
 const HouseItem = (props) => {
   return (
     <>
-      <NavLink to="/property-details" className="swiper-house-list-item">
+      <NavLink
+        to={`/property-details/${props.id}`}
+        className="swiper-house-list-item"
+      >
         <div className="swiper-house-list-item-img">
           <img src={props.mainImg} alt={props.name} />
         </div>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -13,10 +13,10 @@ import styles from "./SliderFrequentlyQuestions.module.scss";
 import { faqArray } from "./frequentlyQuestionsList";
 import FrequentlyQuestionsItem from "./FrequentlyQuentionsItem";
 
-const FrequentlyQuestions = () => {
+const FrequentlyQuestions = forwardRef((props, ref) => {
   return (
     <>
-      <section className="swiper-faq">
+      <section className="swiper-faq" ref={ref}>
         <div className="container">
           <h2 className="swiper-faq-header">Frequently Asked Questions</h2>
           <div className="swiper-faq-info">
@@ -69,6 +69,6 @@ const FrequentlyQuestions = () => {
       </section>
     </>
   );
-};
+});
 
 export default FrequentlyQuestions;

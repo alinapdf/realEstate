@@ -1,6 +1,6 @@
 import "./PropertyDetailsInfo.scss";
 
-const PropertyDetailsInfo = () => {
+const PropertyDetailsInfo = (props) => {
   return (
     <>
       <section className="property-details-info2">
@@ -12,10 +12,7 @@ const PropertyDetailsInfo = () => {
                   Description
                 </p>
                 <p className="property-details-info2-wrapper-right-part-desc-text">
-                  Discover your own piece of paradise with the Seaside Serenity
-                  Villa. T With an open floor plan, breathtaking ocean views
-                  from every room, and direct access to a pristine sandy beach,
-                  this property is the epitome of coastal living.
+                  {props.desc}
                 </p>
               </div>
               <ul className="property-details-info2-wrapper-right-part-components">
@@ -24,7 +21,7 @@ const PropertyDetailsInfo = () => {
                     Bedrooms
                   </p>
                   <p className="property-details-info2-wrapper-right-part-components-item-number">
-                    04
+                    {props.bedroomsQuantity}
                   </p>
                 </li>
                 <li className="property-details-info2-wrapper-right-part-components-item ">
@@ -32,7 +29,7 @@ const PropertyDetailsInfo = () => {
                     Bathrooms
                   </p>
                   <p className="property-details-info2-wrapper-right-part-components-item-number">
-                    03
+                    {props.bathroomsQuantity}
                   </p>
                 </li>
                 <li className="property-details-info2-wrapper-right-part-components-item ">
@@ -40,7 +37,7 @@ const PropertyDetailsInfo = () => {
                     Area
                   </p>
                   <p className="property-details-info2-wrapper-right-part-components-item-number">
-                    2,500 Square Feet
+                    {props.area}
                   </p>
                 </li>
               </ul>
@@ -50,22 +47,16 @@ const PropertyDetailsInfo = () => {
                 Key Features and Amenities
               </p>
               <ul className="property-details-info2-wrapper-left-part-features">
-                <li className="property-details-info2-wrapper-left-part-features-item">
-                  Expansive oceanfront terrace for outdoor entertaining
-                </li>
-                <li className="property-details-info2-wrapper-left-part-features-item">
-                  Gourmet kitchen with top-of-the-line appliances
-                </li>
-                <li className="property-details-info2-wrapper-left-part-features-item">
-                  Private beach access for morning strolls and sunset views
-                </li>
-                <li className="property-details-info2-wrapper-left-part-features-item">
-                  Master suite with a spa-inspired bathroom and ocean-facing
-                  balcony
-                </li>
-                <li className="property-details-info2-wrapper-left-part-features-item">
-                  Private garage and ample storage space
-                </li>
+                {props.keyFeatures.map((feature, index) => {
+                  return (
+                    <li
+                      className="property-details-info2-wrapper-left-part-features-item"
+                      key={index}
+                    >
+                      {feature}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>

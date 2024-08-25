@@ -1,10 +1,12 @@
 import FindYourDreamPropertyFilter from "./FindYourDreamPropertyFilter";
 import "./FindYourDreamProperty.scss";
 
-const FindYourDreamProperty = () => {
+import React, { forwardRef } from "react";
+
+const FindYourDreamProperty = forwardRef((props, ref) => {
   return (
     <>
-      <section className="find-your-drean-property">
+      <section className="find-your-drean-property" ref={ref}>
         <div className="info-text">
           <div className="container">
             <h2 className="find-your-drean-property-header">
@@ -22,6 +24,6 @@ const FindYourDreamProperty = () => {
       </section>
     </>
   );
-};
+});
 
 export default FindYourDreamProperty;

@@ -1,5 +1,5 @@
 import "./PropertyDetailsForm.scss";
-const PropertyDetailsForm = () => {
+const PropertyDetailsForm = (props) => {
   return (
     <>
       <section className="property-details-form">
@@ -80,7 +80,7 @@ const PropertyDetailsForm = () => {
                   Selected Property
                 </p>
                 <div className="property-details-form-itself-selected-property-parametr">
-                  Seaside Serenity Villa, Malibu, California
+                  {props.name}, {props.location}
                 </div>
               </div>
               <label

@@ -1,7 +1,7 @@
 import PropertyDetailsSwiper from "./PropertyDetailsSwiper";
 import "./PropertyDetailsSwiper.scss";
 
-const PropertyDetailsHero = () => {
+const PropertyDetailsHero = (props) => {
   return (
     <>
       <section className="property-details">
@@ -9,10 +9,10 @@ const PropertyDetailsHero = () => {
           <div className="property-details-info">
             <div className="property-details-info-right-part">
               <h2 className="property-details-info-right-part-header">
-                Seaside Serenity Villa
+                {props.name}
               </h2>
               <p className="property-details-info-right-part-location">
-                Malibu, California
+                {props.location}
               </p>
             </div>
             <div className="property-details-info-left-part">
@@ -20,11 +20,11 @@ const PropertyDetailsHero = () => {
                 Price
               </p>
               <p className="property-details-info-left-part-price">
-                $1,250,000
+                {props.price}
               </p>
             </div>
           </div>
-          <PropertyDetailsSwiper />
+          <PropertyDetailsSwiper images={props.images} />
         </div>
       </section>
     </>

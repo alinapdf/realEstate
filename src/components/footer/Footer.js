@@ -6,6 +6,8 @@ import facebook from "./../../img/footer/facebook-icon.svg";
 import linkedin from "./../../img/footer/linkedin-icon.svg";
 import twitter from "./../../img/footer/twitter-icon.svg";
 import youtube from "./../../img/footer/youtube-icon.svg";
+import { NavLink } from "react-router-dom";
+import Nav from "../nav/nav/Nav";
 const Footer = () => {
   return (
     <>
@@ -34,44 +36,37 @@ const Footer = () => {
                 </p>
                 <ul className="footer-main-right-part-list-wrapper-list">
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="/#heroSection"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
                       Hero Section
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
+                    <NavLink
+                      to="/#features"
                       href="#"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
                       Features
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="/#properties"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
                       Properties
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="/#faq"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
                       FAQ’s
-                    </a>
-                  </li>
-                  <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
-                      href="#"
-                      className="footer-main-right-part-list-wrapper-list-item-link"
-                    >
-                      Hero Section
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </div>
@@ -81,44 +76,37 @@ const Footer = () => {
                 </p>
                 <ul className="footer-main-right-part-list-wrapper-list">
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
+                    <NavLink
+                      to="/about-us#ourJourney"
                       href="#"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
-                      Our Story
-                    </a>
+                      Our Journey
+                    </NavLink>
                   </li>
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
-                      href="#"
-                      className="footer-main-right-part-list-wrapper-list-item-link"
-                    >
-                      Our Works
-                    </a>
-                  </li>
-                  <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="/about-us#howItWorks"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
                       How It Works
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="/about-us#ourTeam"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
                       Our Team
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="/about-us#ourClients"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
                       Our Clients
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </div>
@@ -128,20 +116,22 @@ const Footer = () => {
                 </p>
                 <ul className="footer-main-right-part-list-wrapper-list">
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
+                    <NavLink
+                      to="/properties#findProperty"
+                      href="#"
+                      className="footer-main-right-part-list-wrapper-list-item-link"
+                    >
+                      Find Property
+                    </NavLink>
+                  </li>
+                  <li className="footer-main-right-part-list-wrapper-list-item">
+                    <NavLink
+                      to="properties#portfolio"
                       href="#"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
                       Portfolio
-                    </a>
-                  </li>
-                  <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
-                      href="#"
-                      className="footer-main-right-part-list-wrapper-list-item-link"
-                    >
-                      Categories
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </div>
@@ -151,44 +141,38 @@ const Footer = () => {
                 </p>
                 <ul className="footer-main-right-part-list-wrapper-list">
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="/properties"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
-                      Valuation Mastery
-                    </a>
+                      Find Your Dream Home
+                    </NavLink>
                   </li>
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="/service#unlockPropertyValue"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
-                      Strategic Marketing
-                    </a>
+                      Unlock Property Value
+                    </NavLink>
                   </li>
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
+                    <NavLink
+                      to="/service#effortlessPropertyManagement"
                       href="#"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
-                      Negotiation Wizardry
-                    </a>
+                      Effortless Property Management
+                    </NavLink>
                   </li>
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
+                    <NavLink
+                      to="/service#smartInvestment"
                       href="#"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
-                      Closing Success
-                    </a>
-                  </li>
-                  <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
-                      href="#"
-                      className="footer-main-right-part-list-wrapper-list-item-link"
-                    >
-                      Property Management
-                    </a>
+                      Smart Investment, Informed Decisions
+                    </NavLink>
                   </li>
                 </ul>
               </div>
@@ -198,20 +182,22 @@ const Footer = () => {
                 </p>
                 <ul className="footer-main-right-part-list-wrapper-list">
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
+                    <NavLink
+                      to="/contacts#form"
                       href="#"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
                       Contact Form
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="footer-main-right-part-list-wrapper-list-item">
-                    <a
+                    <NavLink
+                      to="/contacts#offices"
                       href="#"
                       className="footer-main-right-part-list-wrapper-list-item-link"
                     >
                       Our Offices
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </div>

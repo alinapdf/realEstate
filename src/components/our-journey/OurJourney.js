@@ -2,10 +2,12 @@ import Counts from "../counts/Counts";
 import "./OurJourney.scss";
 
 import ourJourneyMainImg from "./../../img/our-journey/our-journey-main-photo.jpg";
-const OurJourney = () => {
+
+import React, { forwardRef } from "react";
+const OurJourney = forwardRef((props, ref) => {
   return (
     <>
-      <section className="our-journey">
+      <section className="our-journey" ref={ref}>
         <div className="container">
           <div className="our-journey-wrapper">
             <div className="our-journey-wrapper-info">
@@ -27,6 +29,6 @@ const OurJourney = () => {
       </section>
     </>
   );
-};
+});
 
 export default OurJourney;

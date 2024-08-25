@@ -5,10 +5,12 @@ import flSmartInvestment from "./../../img/fast-links/fl-smart-investment.svg";
 import "./FastLinks.scss";
 import { NavLink } from "react-router-dom";
 
-const FastLinks = () => {
+import React, { forwardRef } from "react";
+
+const FastLinks = forwardRef((props, ref) => {
   return (
     <>
-      <section className="fast-links">
+      <section className="fast-links" ref={ref}>
         <div className="fast-links-container">
           <ul className="fast-links-list">
             <li className="fast-links-list-item">
@@ -72,6 +74,6 @@ const FastLinks = () => {
       </section>
     </>
   );
-};
+});
 
 export default FastLinks;

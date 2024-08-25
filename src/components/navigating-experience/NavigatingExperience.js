@@ -1,9 +1,12 @@
 import { navigatingExperienceList } from "./navigatingExperienceList";
 import "./NavigatingExperience.scss";
-const NavigatingExperience = () => {
+
+import React, { forwardRef } from "react";
+
+const NavigatingExperience = forwardRef((props, ref) => {
   return (
     <>
-      <section className="navigating-experience">
+      <section className="navigating-experience" ref={ref}>
         <div className="container">
           <h2 className="navigating-experience-header">
             Navigating the Estatein Experience
@@ -36,6 +39,6 @@ const NavigatingExperience = () => {
       </section>
     </>
   );
-};
+});
 
 export default NavigatingExperience;
