@@ -131,3 +131,14 @@
     }
   }
 }
+
+.property-details-form-itself-client-info-label-error {
+  color: transparent;
+  margin-top: 10px;
+  display: block;
+  font-size: 12px;
+}
+
+.property-details-form-itself-client-info-label-error.active {
+  color: red;
+}

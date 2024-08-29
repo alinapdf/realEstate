@@ -1,5 +1,24 @@
 import "./PropertyDetailsForm.scss";
+import { useForm } from "react-hook-form";
 const PropertyDetailsForm = (props) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    mode: "onSubmit",
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+    },
+  });
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
   return (
     <>
       <section className="property-details-form">
@@ -17,7 +36,11 @@ const PropertyDetailsForm = (props) => {
               </p>
             </div>
 
-            <form action="#" className="property-details-form-itself">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              action="#"
+              className="property-details-form-itself"
+            >
               <div className="property-details-form-itself-client-info">
                 <label
                   htmlFor="first-name"
@@ -30,7 +53,29 @@ const PropertyDetailsForm = (props) => {
                     id="first-name"
                     className="property-details-form-itself-client-info-input"
                     placeholder="Enter First Name"
+                    {...register("firstName", {
+                      required: "This field is required",
+                      minLength: {
+                        value: 1,
+                        message: "Minimum length is 1 character",
+                      },
+                      maxLength: {
+                        value: 20,
+                        message: "Maximum length is 20 characters",
+                      },
+                      pattern: {
+                        value: /^[A-Za-z]+$/,
+                        message: "Only letters are allowed",
+                      },
+                    })}
                   />
+                  <span
+                    className={`form-common-form-client-info-label-error ${
+                      errors.firstName ? "active" : ""
+                    }`}
+                  >
+                    {errors.firstName?.message}
+                  </span>
                 </label>
 
                 <label
@@ -44,7 +89,29 @@ const PropertyDetailsForm = (props) => {
                     id="last-name"
                     className="property-details-form-itself-client-info-input"
                     placeholder="Enter Last Name"
+                    {...register("lastName", {
+                      required: "This field is required",
+                      minLength: {
+                        value: 1,
+                        message: "Minimum length is 1 character",
+                      },
+                      maxLength: {
+                        value: 20,
+                        message: "Maximum length is 20 characters",
+                      },
+                      pattern: {
+                        value: /^[A-Za-z]+$/,
+                        message: "Only letters are allowed",
+                      },
+                    })}
                   />
+                  <span
+                    className={`form-common-form-client-info-label-error ${
+                      errors.lastName ? "active" : ""
+                    }`}
+                  >
+                    {errors.lastName?.message}
+                  </span>
                 </label>
 
                 <label
@@ -58,7 +125,22 @@ const PropertyDetailsForm = (props) => {
                     id="email"
                     className="property-details-form-itself-client-info-input"
                     placeholder="Enter your Email"
+                    {...register("email", {
+                      required: "This field is required",
+                      pattern: {
+                        value:
+                          /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                        message: "Invalid email address",
+                      },
+                    })}
                   />
+                  <span
+                    className={`form-common-form-client-info-label-error ${
+                      errors.email ? "active" : ""
+                    }`}
+                  >
+                    {errors.email?.message}
+                  </span>
                 </label>
 
                 <label
@@ -72,7 +154,21 @@ const PropertyDetailsForm = (props) => {
                     id="phone"
                     className="property-details-form-itself-client-info-input"
                     placeholder="Enter Phone Number"
+                    {...register("phone", {
+                      required: "This field is required",
+                      pattern: {
+                        value: /^[0-9]+$/,
+                        message: "Only numbers are allowed",
+                      },
+                    })}
                   />
+                  <span
+                    className={`form-common-form-client-info-label-error ${
+                      errors.phone ? "active" : ""
+                    }`}
+                  >
+                    {errors.phone?.message}
+                  </span>
                 </label>
               </div>
               <div className="property-details-form-itself-selected-property">

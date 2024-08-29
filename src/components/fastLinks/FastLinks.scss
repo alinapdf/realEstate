@@ -3,7 +3,7 @@
   border-bottom: 1px solid #262626;
   margin-bottom: 110px;
   &-container {
-    width: 1920px;
+    max-width: 1920px;
     margin: 0 auto;
     .fast-links-list {
       margin: 20px;
@@ -11,7 +11,7 @@
 
       &-item {
         border-radius: 12px;
-        background-color: #1a1a1a;
+        // background-color: #1a1a1a;
         border: 1px solid #262626;
         width: 455px;
         height: 212px;

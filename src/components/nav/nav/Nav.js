@@ -1,3 +1,4 @@
+import BtnDarkMode from "../../btn-mode/BtnMode";
 import logoDesctop from "./../../../img/nav/logo-descktop.svg";
 import "./Nav.scss";
 import { NavLink } from "react-router-dom";
@@ -55,9 +56,12 @@ const Nav = () => {
                 </NavLink>
               </li>
             </ul>
-            <NavLink to="/contacts" className="nav-wrapper-contact-us">
-              Contact Us
-            </NavLink>
+            <div className="wpapper-btns">
+              <BtnDarkMode />
+              <NavLink to="/contacts" className="nav-wrapper-contact-us">
+                Contact Us
+              </NavLink>
+            </div>
           </div>
         </div>
       </nav>
